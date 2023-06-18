@@ -858,6 +858,11 @@ public abstract class BleManager implements ILogger {
 		return requestHandler.getValueChangedCallback(characteristic);
 	}
 
+	@NonNull
+	protected ValueChangedCallback setDescriptorChangedCallback(@Nullable final BluetoothGattDescriptor descriptor) {
+		return requestHandler.getValueChangedCallback(descriptor);
+	}
+
 	/**
 	 * Returns the callback that is registered for value changes (indications) of given
 	 * characteristic. After assigning the indication callback, indications must be
